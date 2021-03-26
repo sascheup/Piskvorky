@@ -21,17 +21,29 @@ body {
 }
 
 h1 {
-  font-family: 'Lobster', cursive;
+  font-family: 'Lobster', serif;
   text-align: center;
   font-weight: 500;
   font-size: 40px;
   letter-spacing: 1px;
+  padding-top: 30px;
 }
 
-p {
+img {
+  width: 260px;
+}
+
+figcaption {
+  padding-bottom: 30px;
+  padding-top: 5px;
   text-align: center;
-  padding: 0px 15px 15px 15px;
-  line-height: 1.5;
+}
+
+li {
+  text-align: left;
+  padding: 0px 25px 15px 15px;
+  margin: 0 20px 0 20px;
+  line-height: 1.2;
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
 }
