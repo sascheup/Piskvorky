@@ -33,6 +33,10 @@ img {
   width: 100%;
 }
 
+figure {
+  width: auto;
+}
+
 figcaption {
   padding-bottom: 30px;
   padding-top: 5px;
@@ -85,10 +89,16 @@ a {
 }
 
 @media (min-width: 540px) {
-  figure {
+  .obrazky {
     display: flex;
-    width: calc((80% - 50px) / 2);
+    width: 100%;
     flex-wrap: wrap;
     text-align: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+  figure {
+    width: 30%;
+    margin: 20px;
   }
 }
