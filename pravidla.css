@@ -79,20 +79,28 @@ a {
 }
 
 @media (min-width: 540px) {
-  body {
+  main {
     display: flex;
     flex-wrap: wrap;
   }
 
   figure {
-    width: calc((100% - 200px) / 2);
-    display: flexbox;
+    width: calc((100% - 150px) / 2);
     flex-wrap: wrap;
-    justify-content: space-between;
+    text-align: center;
   }
 
   img {
+    display: flex;
     width: 100%;
+  }
+}
+
+@media (min-width: 960px) {
+  figure {
     flex-wrap: wrap;
+  }
+  img {
+    width: calc ((100 - 150px) / 2);
   }
 }
