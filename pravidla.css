@@ -85,28 +85,10 @@ a {
 }
 
 @media (min-width: 540px) {
-  main {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   figure {
-    width: calc((100% - 150px) / 2);
+    display: flex;
+    width: calc((80% - 50px) / 2);
     flex-wrap: wrap;
     text-align: center;
-  }
-
-  img {
-    display: flex;
-    width: 100%;
-  }
-}
-
-@media (min-width: 960px) {
-  figure {
-    flex-wrap: wrap;
-  }
-  img {
-    width: calc ((100 - 150px) / 2);
   }
 }
