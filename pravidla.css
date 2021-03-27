@@ -39,6 +39,12 @@ figcaption {
   text-align: center;
 }
 
+#cross,
+#circle {
+  width: 1em;
+  filter: invert(100%);
+}
+
 li {
   text-align: left;
   padding: 0px 25px 15px 15px;
