@@ -17,17 +17,28 @@
 
     <link rel="stylesheet" href="hra.css" />
   </head>
+
   <body>
+    <header>
       <h1>Piškvorky</h1>
-      <div class="headline">
-      <p>HRAJE: <img id="circle" src="imiges/circle.svg" alt="circle" /></p>
-      <div class="navigation">
-      <a class="home" href="index.html">
-      <img src="imiges/home.svg" alt="home" /></a>
-      <a class="restart" href="hra.html">
-      <img src="imiges/restart.svg" alt="restart" /></a></div>
-  
-    </div>
+    </header>
+
+    <main>
+      <nav class="headline">
+        <div class="headline__player">
+          <p>Hraje: <img id="circle" src="imiges/circle.svg" alt="circle" /></p>
+        </div>
+
+        <div class="navigation">
+          <a class="navigation__home" href="index.html">
+            <img src="imiges/home.svg" alt="home"
+          /></a>
+          <a class="navigation_restart" href="hra.html">
+            <img src="imiges/restart.svg" alt="restart"
+          /></a>
+        </div>
+      </nav>
+    </main>
     <div class="table">
       <button class="table__item"></button>
       <button class="table__item"></button>
@@ -129,8 +140,6 @@
       <button class="table__item"></button>
       <button class="table__item"></button>
       <button class="table__item"></button>
-    </div>
-    </div>
     </div>
   </body>
 </html>
