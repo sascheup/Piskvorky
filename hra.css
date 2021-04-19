@@ -89,3 +89,30 @@ p {
 .table__item:focus {
   opacity: 0.8;
 }
+
+.board__field--circle {
+  background-image: url(imiges/circle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75%;
+  animation-name: bounce;
+  animation-duration: 0.15s;
+}
+
+.board__field--cross {
+  background-image: url(imiges/cross.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75%;
+  animation-name: bounce;
+  animation-duration: 0.15s;
+}
+
+@keyframes bounce {
+  from {
+    background-size: 0;
+  }
+  to {
+    background-size: 100%;
+  }
+}
