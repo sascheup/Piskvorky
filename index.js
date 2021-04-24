@@ -1,6 +1,7 @@
 'use strict';
 
 const boardSize = 10;
+const fields = document.querySelectorAll('button');
 
 const getPosition = (field) => {
   let fieldIndex = 0;
@@ -12,7 +13,7 @@ const getPosition = (field) => {
   }
   return {
     row: Math.floor(fieldIndex / boardSize),
-    column: fieldIndex / boardSize,
+    column: fieldIndex % boardSize,
   };
 };
 
@@ -27,9 +28,10 @@ const getSymbol = (field) => {
 };
 const symbolsToWin = 5;
 const isWinningMove = (field) => {
-  console.log(field);
   const origin = getPosition(field);
   const symbol = getSymbol(field);
+  console.log(origin);
+  console.log(symbol);
 
   let i;
 
@@ -81,7 +83,6 @@ const isWinningMove = (field) => {
 };
 
 let activeUser = 'circle';
-const fields = document.querySelectorAll('button');
 
 fields.forEach((btn) =>
   btn.addEventListener('click', (e) => {
@@ -89,22 +90,24 @@ fields.forEach((btn) =>
       e.target.classList.add('board__field--circle');
       document.querySelector('p').innerHTML =
         'HRAJE: <img id="cross" src="imiges/cross.svg" alt="cross" />';
+      let win = isWinningMove(btn);
+      if (win === true) {
+        alert(`Vyhrál kroužek.`);
+      }
+
       activeUser = 'cross';
       btn.disabled = true;
     } else {
       e.target.classList.add('board__field--cross');
       document.querySelector('p').innerHTML =
         'HRAJE: <img id="circle" src="imiges/circle.svg" alt="circle" />';
+      let win = isWinningMove(btn);
+      if (win === true) {
+        alert(`Vyhrál křížek.`);
+      }
+
       activeUser = 'circle';
       btn.disabled = true;
-    }
-    let win = isWinningMove(btn);
-
-    if (win === true && activeUser === 'circle') {
-      alert(`Vyhrál kroužek.`);
-    }
-    if (win === true && activeUser === 'cross') {
-      alert(`Vyhrál křížek.`);
     }
   }),
 );
