@@ -30,8 +30,6 @@ const symbolsToWin = 5;
 const isWinningMove = (field) => {
   const origin = getPosition(field);
   const symbol = getSymbol(field);
-  console.log(origin);
-  console.log(symbol);
 
   let i;
 
@@ -91,9 +89,12 @@ fields.forEach((btn) =>
       document.querySelector('p').innerHTML =
         'HRAJE: <img id="cross" src="imiges/cross.svg" alt="cross" />';
       let win = isWinningMove(btn);
-      if (win === true) {
-        alert(`Vyhrál kroužek.`);
-      }
+      setTimeout(() => {
+        if (win === true) {
+          confirm(`Vyhrál kroužek. Spustit novou hru?`);
+          location.reload();
+        }
+      }, 200);
 
       activeUser = 'cross';
       btn.disabled = true;
@@ -102,10 +103,12 @@ fields.forEach((btn) =>
       document.querySelector('p').innerHTML =
         'HRAJE: <img id="circle" src="imiges/circle.svg" alt="circle" />';
       let win = isWinningMove(btn);
-      if (win === true) {
-        alert(`Vyhrál křížek.`);
-      }
-
+      setTimeout(() => {
+        if (win === true) {
+          confirm(`Vyhrál křížek. Spustit novou hru?`);
+          location.reload();
+        }
+      }, 200);
       activeUser = 'circle';
       btn.disabled = true;
     }
